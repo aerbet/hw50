@@ -1,0 +1,104 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    width: 257px;
+    padding: 20px;
+    background: black;
+}
+
+.card:hover {
+    background: #163e54;
+}
+
+.card-img {
+    max-width: 150px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+p {
+    color: #eeeeee;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h1 {
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.header-title {
+    color: black;
+    text-align: center;
+    display: inline-block;
+}
+
+.header-logo {
+    display: inline-block;
+    width: 200px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.navbar-ul {
+    display: flex;
+}
+
+.navbar-li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+.navbar-li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar-li a:hover {
+    color: #163e54;
+}
+
+.main-title {
+    margin-top: 50px;
+    font-size: 32px;
+    color: black;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.main-text {
+    color: black;
+    padding: 0 300px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    margin-top: 50px;
+    border: 1px solid #163e54;
+    background: #163e54;
+}
+
+.footer-title {
+    color: white;
+    text-align: center;
+}

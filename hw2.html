@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="app.css">
+	<title>Document</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+	const Header = (props) => {
+		return (
+			<div className="header">
+				<img className="header-logo" src={props.logo} alt="Logo"/>
+				<h1 className="header-title">{props.name}</h1>
+			</div>
+		)
+	};
+	
+	const Navbar = (props) => {
+		return (
+			<div className="navbar">
+				<nav>
+					<ul className="navbar-ul">
+						<li className="navbar-li"><a href="#">{props.home}</a></li>
+						<li className="navbar-li"><a href="#">{props.movies}</a></li>
+						<li className="navbar-li"><a href="#">{props.about}</a></li>
+						<li className="navbar-li"><a href="#">{props.social}</a></li>
+						<li className="navbar-li"><a href="#">{props.contact}</a></li>
+					</ul>
+				</nav>
+			</div>
+		)
+	};
+	
+	const Main = (props) => {
+		return (
+			<div className="main">
+				<h2 className="main-title">{props.title}</h2>
+				<p className="main-text">{props.text}</p>
+			</div>
+		)
+	};
+	
+	const Card = (props) => {
+		return (
+			<div className="card">
+				<img className="card-img" src={props.image} alt="Movie Poster"/>
+				<h1>{props.name}</h1>
+				<p>{props.year}</p>
+				<p>Directed by:<br/>{props.author}</p>
+			</div>
+		)
+	};
+	
+	const Footer = (props) => {
+		return (
+			<div className="footer">
+				<h1 className="footer-title">There is footer</h1>
+			</div>
+		)
+	};
+	
+	const App = () => {
+		return (
+			<div>
+				<Header logo="https://www.miamarket.it/wp-content/uploads/2019/10/logo-best-movie.png" name="Best Movies"/>
+				<Navbar home="Home" movies="Movies" about="About Us" social="Our Social" contact="Contacts"/>
+				<Main title="There is a best movies of all time by Best Movies"
+				      text="When it comes to greatness in art, nothing is set in stone. There is no such thing as an objective,
+				       definitive canon, no matter the medium, and no matter what a media outlet may tell you when it releases a list of,
+				        oh, say, the greatest movies ever made – present company included. Sure, it’s a surefire way to get readers clicking.
+				         But we’re not so foolish as to think of ourselves like Moses on the mountain, proclaiming these films as the best of all-time,
+				          with no room for debate. Instead, we’re merely hoping to shake up (and in some spots confirm) the conventional wisdom,
+				           introduce different perspectives and, maybe most importantly, spark passionate debate.
+				            Because the only thing better than watching movies is arguing over them."/>
+				<Card name="Побег из Шоушенка" year={1994} author="Фрэнк Дарабонт"
+				      image="https://upload.wikimedia.org/wikipedia/ru/d/de/Movie_poster_the_shawshank_redemption.jpg"/>
+				<Card name="Унесённые призраками" year={2001} author="Хаяо Миядзаки"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/ae3b699c-3db7-4196-a869-39b610bfe706/600x900"/>
+				<Card name="Сад изящных слов" year={2013} author="Макото Синкай"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/230baaf8-9e08-4125-adf4-0b16fab8f221/300x450"/>
+				<Card name="Ходячий замок" year={2004} author="Хаяо Миядзаки"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/399bb0c1-2ac5-46ca-9efd-50d8708e2809/300x450"/>
+				<Card name="Гарри Поттер: часть 1" year={2001} author="Крис Коламбус"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/27ed5c19-a045-49dd-8624-5f629c5d96e0/300x450"/>
+				<Card name="Властелин колец" year={2001} author="Питер Джексон"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/a2d5bcae-a1a9-442f-8195-f5373a5ba77f/300x450"/>
+				<Card name="Мстители" year={2019} author="Джо Руссо"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/ae22f153-9715-41bb-adb4-f648b3e16092/300x450"/>
+				<Card name="Шрэк" year={2001} author="Эндрю Адамсон"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/7ade06a8-4178-4386-9ee2-87fec5a172eb/300x450"/>
+				<Card name="Король Лев" year={1994} author="Роджер Аллерс"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/60aa1abc-b754-4817-ad9c-0bcda427a12b/300x450"/>
+				<Card name="Человек-паук" year={2018} author="Сэм Рэйми"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/428e2842-4157-45e8-a9af-1e5245e52c37/300x450"/>
+				<Card name="Интерстеллар" year={2014} author="Кристофер Нолан"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/300x450"/>
+				<Card name="Хатико" year={2008} author="Лассе Халльстрём"
+				      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/82f8a2dc-a439-4832-9f0f-dc599e6e78d2/300x450"/>
+				<Footer />
+			</div>
+		)
+	};
+	
+	const root = document.getElementById('app');
+	ReactDOM.createRoot(root).render(<App />);
+</script>
+</body>
+</html>

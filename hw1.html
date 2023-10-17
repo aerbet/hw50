@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		.card {
+			display: inline-block;
+			margin: 10px;
+			border-radius: 10px;
+			width: 230px;
+			padding: 20px;
+			background: black;
+		}
+		
+		.card:hover {
+			background: #163e54;
+		}
+		
+		img {
+			max-width: 150px;
+			height: 200px;
+			display: block;
+			margin: 0 auto;
+			border-radius: 10px;
+		}
+		
+		p {
+			color: #eeeeee;
+			font-size: 22px;
+			font-weight: 600;
+		}
+		
+		h1 {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="text/babel">
+	const Card = (props) => {
+		return (
+			<div className="card">
+				<img src={props.image} alt="movie poster"/>
+				<h1>{props.name}</h1>
+				<p>{props.year}</p>
+				<p>Directed by:<br/>{props.author}</p>
+			</div>
+		)
+	};
+	
+	const movie = (
+		<div>
+			<Card name="Побег из Шоушенка" year={1994} author="Фрэнк Дарабонт"
+			      image="https://upload.wikimedia.org/wikipedia/ru/d/de/Movie_poster_the_shawshank_redemption.jpg"/>
+			<Card name="Унесённые призраками" year={2001} author="Хаяо Миядзаки"
+			      image="https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/ae3b699c-3db7-4196-a869-39b610bfe706/600x900"/>
+			<Card name="Сад изящных слов" year={2013} author="Макото Синкай"
+			      image="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/230baaf8-9e08-4125-adf4-0b16fab8f221/300x450"/>
+		</div>
+	)
+	
+	const container = document.getElementById('app');
+	ReactDOM.createRoot(container).render(movie);
+
+</script>
+</body>
+</html>
